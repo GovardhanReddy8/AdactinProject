@@ -15,6 +15,7 @@ public class Validate_Login extends BasePage {
 		lp.login();
 
 		Assert.assertEquals(driver.getTitle(), "Adactin.com - Search Hotel");
+		
 
 	}
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class SearchHotelPage {
 	public SearchHotelPage(WebDriver driver) {
@@ -29,52 +30,51 @@ public class SearchHotelPage {
 	@FindBy(xpath = "//input[@name='Submit']")
 	WebElement Search;
 
-	public void Location(String value) {
-		Location.sendKeys(value);
+	public void Location() {
+		Select select = new Select(Location);
+		select.selectByIndex(5);
+		
 	}
 
-	public void Hotels(String value) {
-		Hotels.sendKeys(value);
+	public void Hotels() {
+		Select one = new Select(Hotels);
+		one.selectByIndex(1);
 	}
 
-	public void RoomType(String value) {
-		RoomType.sendKeys(value);
+	public void RoomType() {
+		Select two = new Select(RoomType);
+		two.selectByIndex(1);
+		
 	}
 
-	public void NumberofRooms(String value) {
-		NumberofRooms.sendKeys(value);
+	public void NumberofRooms() {
+		Select three = new Select(NumberofRooms);
+		three.selectByIndex(0);
 	}
 
-	public void CheckInDate(String value) {
-		CheckInDate.sendKeys(value);
+	public void CheckInDate() {
+		Select four = new Select(CheckInDate);
+		four.selectByVisibleText(null);
 	}
 
-	public void CheckOutDate(String value) {
-		CheckOutDate.sendKeys(value);
+	public void CheckOutDate() {
+		Select five = new Select(CheckOutDate);
+		five.selectByVisibleText(null);
 	}
 
-	public void AdultsperRoom(String value) {
-		AdultsperRoom.sendKeys(value);
+	public void AdultsperRoom() {
+		Select six = new Select(AdultsperRoom);
+		six.selectByIndex(1);
 	}
 
-	public void ChildrenperRoom(String value) {
-		ChildrenperRoom.sendKeys(value);
+	public void ChildrenperRoom() {
+		Select seven = new Select(ChildrenperRoom);
+		seven.selectByIndex(0);
 	}
 
 	public void Search() {
 		Search.click();
 	}
 
-	public void searchHotel(String value) {
-		Location.sendKeys(value);
-		Hotels.sendKeys(value);
-		RoomType.sendKeys(value);
-		NumberofRooms.sendKeys(value);
-		CheckInDate.sendKeys(value);
-		CheckOutDate.sendKeys(value);
-		AdultsperRoom.sendKeys(value);
-		ChildrenperRoom.sendKeys(value);
-		Search.click();
-	}
 
 }
