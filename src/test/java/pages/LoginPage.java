@@ -1,21 +1,43 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	WebDriver driver;
 
-	public void homePage() {
-		System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("https://adactinhotelapp.com/");
+	public LoginPage(WebDriver driver) { // need to ask
+		PageFactory.initElements(driver, this);
 	}
 
-	public void doLogin(String path, String value) {
-		driver.findElement(By.xpath(path)).sendKeys(value);
-		driver.findElement(By.xpath(path)).click();
+	@FindBy(xpath = "//input[@name='username']")
+	WebElement username;
+
+	@FindBy(xpath = "//input[@name='password']")
+	WebElement password;
+
+	@FindBy(xpath = "//input[@name='login']")
+	WebElement login;
+
+	public void username(String untext) {
+		username.sendKeys(untext);
+	}
+
+	public void password(String pstext) {
+		password.sendKeys(pstext);
+
+	}
+
+	public void login() {
+		login.click();
+
+	}
+
+	public void doLogin(String untext, String pstext) {
+		username.sendKeys(untext);
+		password.sendKeys(pstext);
+		login.click();
 
 	}
 
