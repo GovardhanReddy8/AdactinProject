@@ -31,20 +31,23 @@ public class SearchHotelPage {
 	WebElement Search;
 
 	public void Location() {
-		Select select = new Select(Location);
-		select.selectByIndex(5);
-		
+		Select sel = new Select(Location);
+		sel.selectByIndex(5);
+
 	}
 
 	public void Hotels() {
-		Select one = new Select(Hotels);
-		one.selectByIndex(1);
+		/*
+		 * Select one = new Select(Hotels); one.selectByIndex(1);
+		 */
+		
+		new Select(Hotels).selectByIndex(1);
 	}
 
 	public void RoomType() {
 		Select two = new Select(RoomType);
 		two.selectByIndex(1);
-		
+
 	}
 
 	public void NumberofRooms() {
@@ -75,6 +78,7 @@ public class SearchHotelPage {
 	public void Search() {
 		Search.click();
 	}
+		
+	}
 
 
-}

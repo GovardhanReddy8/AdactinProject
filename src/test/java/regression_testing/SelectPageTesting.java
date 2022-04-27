@@ -1,4 +1,5 @@
 package regression_testing;
+
 import pages.SearchHotelPage;
 
 public class SelectPageTesting extends Validate_Login {
@@ -13,8 +14,7 @@ public class SelectPageTesting extends Validate_Login {
 		shp.AdultsperRoom();
 		shp.ChildrenperRoom();
 		shp.Search();
-		
-		
+
 	}
-	
+
 }
