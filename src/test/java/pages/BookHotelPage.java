@@ -1,16 +1,21 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class BookHotelPage {
+	public BookHotelPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
 
 	@FindBy(xpath = "//input[@name='first_name']")
 	WebElement firstname;
 
-	public void firstname(String fname) {
-		firstname.sendKeys(fname);
+	public void firstname(String firname) {
+		new Select(firstname).selectByVisibleText(firname);
 
 	}
 
@@ -18,7 +23,7 @@ public class BookHotelPage {
 	WebElement lastName;
 
 	public void lastName(String lname) {
-		lastName.sendKeys(lname);
+		new Select(lastName).selectByVisibleText(lname);
 
 	}
 
@@ -26,7 +31,7 @@ public class BookHotelPage {
 	WebElement address;
 
 	public void address(String addrs) {
-		address.sendKeys(addrs);
+		new Select(address).selectByVisibleText(addrs);
 
 	}
 
@@ -34,31 +39,31 @@ public class BookHotelPage {
 	WebElement ccnumber;
 
 	public void ccnumber(String cardno) {
-		ccnumber.sendKeys(cardno);
+		new Select(ccnumber).selectByVisibleText(cardno);
 
 	}
 
 	@FindBy(xpath = "//select[@name='cc_type']")
 	WebElement cctype;
 
-	public void cctype() {
-		new Select(cctype).selectByIndex(1);
+	public void cctype(String cardtype) {
+		new Select(cctype).selectByVisibleText(cardtype);
 
 	}
 
 	@FindBy(xpath = "//select[@name='cc_exp_month']")
 	WebElement ccmonth;
 
-	public void ccmonth() {
-		new Select(ccmonth).selectByIndex(8);
+	public void ccmonth(String cardmonth) {
+		new Select(ccmonth).selectByVisibleText(cardmonth);
 
 	}
 
 	@FindBy(xpath = "//select[@name='cc_exp_year']")
 	WebElement ccyear;
 
-	public void ccyear() {
-		new Select(ccyear).selectByIndex(11);
+	public void ccyear(String cardyear) {
+		new Select(ccyear).selectByVisibleText(cardyear);
 
 	}
 
@@ -66,15 +71,15 @@ public class BookHotelPage {
 	WebElement cvvno;
 
 	public void cvvno(String cno) {
-		cvvno.sendKeys(cno);
+		new Select(cvvno).selectByVisibleText(cno);
 
 	}
 
 	@FindBy(xpath = "//input[@name='book_now']")
-	WebElement button;
+	WebElement bookNow;
 
 	public void button() {
-		button.click();
+		bookNow.click();
 
 	}
 

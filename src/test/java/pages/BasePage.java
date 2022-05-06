@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BasePage {
 
-	public static WebDriver driver; // use for assert method in validation
+	public static WebDriver driver; // use for assert method for validation
 
 	@BeforeMethod
 	public void setUp() throws IOException {

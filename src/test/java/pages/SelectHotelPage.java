@@ -25,69 +25,74 @@ public class SelectHotelPage {
 	}
 
 	@FindBy(xpath = "//input[@name='hotel_name_0']")
-	WebElement hName;
+	WebElement hotelName;
 
-	public void hotelName() {
-		hName.getText();
+	public void hotelName() {  // one way 
+		 hotelName.getText();
+		 System.out.println(hotelName);
 
 	}
 
 	@FindBy(xpath = "//input[@name='location_0']")
 	WebElement location;
 
-	public void loc() {
-		location.getText();
-
-	}
+	
+	  public String location() { 
+		  
+		  return location.getText(); // other way
+	  
+	  }
+	 
 
 	@FindBy(xpath = "//input[@name='rooms_0']")
 	WebElement rooms;
 
-	public void room() {
-		rooms.getText();
+	public String rooms() {
+		return rooms.getText();
 
 	}
 
 	@FindBy(xpath = "//input[@name='arr_date_0']")
-	WebElement arrdate;
+	WebElement arrivalDate;
 
-	public void ard() {
-		arrdate.getText();
+	public String arrivalDate() {
+		return arrivalDate.getText();
 
 	}
 
 	@FindBy(xpath = "//input[@name='dep_date_0']")
-	WebElement depdate;
+	WebElement departureDate;
 
-	public void depd() {
-		depdate.getText();
+	public String departureDate() {
+		return departureDate.getText();
+
 	}
 
 	@FindBy(xpath = "//input[@name='no_days_0']")
-	WebElement noday;
+	WebElement noofDays;
 
-	public void nday() {
-		noday.getText();
+	public String noofDays() {
+		return noofDays.getText();
 	}
 
 	@FindBy(xpath = "//input[@name='room_type_0']")
-	WebElement rtype;
+	WebElement roomsType;
 
-	public void type() {
-		rtype.getText();
+	public String roomsType() {
+		return roomsType.getText();
 	}
 
 	@FindBy(xpath = "//input[@name='price_night_0']")
-	WebElement pricen;
+	WebElement priceperNight;
 
-	public void price() {
-		pricen.getText();
+	public String priceperNight() {
+		return priceperNight.getText();
 	}
 
 	@FindBy(xpath = "//input[@name='total_price_0']")
-	WebElement tprice;
+	WebElement totalPrice;
 
-	public void pricet() {
-		tprice.getText();
+	public String totalPrice() {
+		return totalPrice.getText();
 	}
 }
