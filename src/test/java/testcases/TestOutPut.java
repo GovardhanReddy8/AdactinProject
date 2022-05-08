@@ -17,7 +17,7 @@ public class TestOutPut extends BasePage{
 		ts.login();
 		Thread.sleep(2000);
 		
-		ts.username("Govardhan");
+	
 		ts.password("govardhan123");
 		ts.login();
 		Thread.sleep(2000);

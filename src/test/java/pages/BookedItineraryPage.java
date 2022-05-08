@@ -1,33 +1,45 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import org.openqa.selenium.support.PageFactory;
 
 public class BookedItineraryPage {
-	@FindBy(xpath="//input[@name='order_no']")
-	WebElement orderNumber;
-	public void orderNumber(String number) {
-		orderNumber.getText();
-		
+	public BookedItineraryPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+
 	}
 
-	@FindBy(xpath="//input[@name='search_hotel']")
-	WebElement searchhotel;
-	public void searchhotel() {
-		searchhotel.click();
-		
+	@FindBy(xpath = "//input[@name='ids[]']")
+	WebElement selectOne;
+
+	public void selectOne(String orderId) {
+		selectOne.sendKeys(orderId);
+		System.out.println(selectOne);
+
 	}
-	@FindBy(xpath="//input[@name='my_itinerary']")
-	WebElement myitinerary;
-	public void myitinerary() {
-		myitinerary.click();
-		
+
+	@FindBy(xpath = "//input[@name='cancelall']")
+	WebElement cancel;
+
+	public void cancel() {
+		cancel.click();
+
 	}
-	@FindBy(xpath="//input[@name='logout']")
-	WebElement logout;
-	public void logout() {
-		logout.click();
-		
+
+	@FindBy(xpath = "//input[@name='logout']")
+	WebElement logOut;
+
+	public void logOut() {
+		logOut.click();
+	}
+
+	@FindBy(xpath = "//input[@name='search_hotel']")
+	WebElement searchAgain;
+
+	public void searchAgain() {
+		searchAgain.click();
+
 	}
 }

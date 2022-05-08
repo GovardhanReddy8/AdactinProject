@@ -45,13 +45,15 @@ public class TestCaseOne {
 	WebElement warmsg;
 	
 	public void warUmsg() {
-		warmsg.getText();
+		String text = warmsg.getText();
+		System.out.println("Error messages:"+text);
 	}
 
-	@FindBy(xpath="//span[@id='password_span']")
+	@FindBy(xpath="(//span[@class='login_error'])[2]")
 	WebElement warPmsg;
 	public void warPmsg() {
-		warPmsg.getText();
+		String text1 = warPmsg.getText();
+		System.out.println("Error messages:"+text1);
 		
 	}
 	
