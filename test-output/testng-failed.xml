@@ -5,8 +5,7 @@
     <classes>
       <class name="regression_testing.SearchPageTest">
         <methods>
-          <include name="teardown"/>
-          <include name="searchHotel"/>
+          <include name="searchHotel" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- regression_testing.SearchPageTest -->

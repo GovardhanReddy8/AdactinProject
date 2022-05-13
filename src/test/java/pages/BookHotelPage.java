@@ -11,39 +11,39 @@ public class BookHotelPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//input[@name='first_name']")
+	@FindBy(xpath = "//input[@id='first_name']")
 	WebElement firstname;
 
 	public void firstname(String firname) {
-		new Select(firstname).selectByVisibleText(firname);
+		firstname.sendKeys(firname);
 
 	}
 
-	@FindBy(xpath = "//input[@name='last_name']")
+	@FindBy(xpath = "//input[@id='last_name']")
 	WebElement lastName;
 
 	public void lastName(String lname) {
-		new Select(lastName).selectByVisibleText(lname);
+		lastName.sendKeys(lname);
 
 	}
 
-	@FindBy(xpath = "//input[@name='address']")
+	@FindBy(xpath = "//textarea[@id='address']")
 	WebElement address;
 
 	public void address(String addrs) {
-		new Select(address).selectByVisibleText(addrs);
+		address.sendKeys(addrs);
 
 	}
 
-	@FindBy(xpath = "//input[@name='cc_num']")
+	@FindBy(xpath = "//input[@id='cc_num']")
 	WebElement ccnumber;
 
 	public void ccnumber(String cardno) {
-		new Select(ccnumber).selectByVisibleText(cardno);
+		ccnumber.sendKeys(cardno);
 
 	}
 
-	@FindBy(xpath = "//select[@name='cc_type']")
+	@FindBy(xpath = "//select[@id='cc_type']")
 	WebElement cctype;
 
 	public void cctype(String cardtype) {
@@ -51,7 +51,7 @@ public class BookHotelPage {
 
 	}
 
-	@FindBy(xpath = "//select[@name='cc_exp_month']")
+	@FindBy(xpath = "//select[@id='cc_exp_month']")
 	WebElement ccmonth;
 
 	public void ccmonth(String cardmonth) {
@@ -59,7 +59,7 @@ public class BookHotelPage {
 
 	}
 
-	@FindBy(xpath = "//select[@name='cc_exp_year']")
+	@FindBy(xpath = "//select[@id='cc_exp_year']")
 	WebElement ccyear;
 
 	public void ccyear(String cardyear) {
@@ -67,18 +67,18 @@ public class BookHotelPage {
 
 	}
 
-	@FindBy(xpath = "//input[@name='cc_cvv']")
+	@FindBy(xpath = "//input[@id='cc_cvv']")
 	WebElement cvvno;
 
 	public void cvvno(String cno) {
-		new Select(cvvno).selectByVisibleText(cno);
+		cvvno.sendKeys(cno);
 
 	}
 
-	@FindBy(xpath = "//input[@name='book_now']")
+	@FindBy(xpath = "//input[@id='book_now']")
 	WebElement bookNow;
 
-	public void button() {
+	public void bookNow() {
 		bookNow.click();
 
 	}

@@ -13,13 +13,13 @@ public class TestOutPut extends BasePage{
 		Thread.sleep(2000);
 		
 		ts.username("Govardhan");
-		ts.warPmsg();
 		ts.login();
+		ts.warPmsg();
 		Thread.sleep(2000);
 		
-	
 		ts.password("govardhan123");
 		ts.login();
+		ts.Logmsg();
 		Thread.sleep(2000);
 		System.out.println();
 		

@@ -48,12 +48,18 @@ public class TestCaseOne {
 		String text = warmsg.getText();
 		System.out.println("Error messages:"+text);
 	}
+		@FindBy(xpath="//span[@id='password_span']")
+		WebElement warPmsg;
+		public void warPmsg() {
+			String text1 = warPmsg.getText();
+			System.out.println("Error messages:"+text1);
+	}
 
-	@FindBy(xpath="(//span[@class='login_error'])[2]")
-	WebElement warPmsg;
-	public void warPmsg() {
-		String text1 = warPmsg.getText();
-		System.out.println("Error messages:"+text1);
+	@FindBy(xpath="(//b[contains(text(),'Invalid Login details or Your Password might have ')]")
+	WebElement Logmsg;
+	public void Logmsg() {
+		String text2 = Logmsg.getText();
+		System.out.println("Error messages:"+text2);
 		
 	}
 	

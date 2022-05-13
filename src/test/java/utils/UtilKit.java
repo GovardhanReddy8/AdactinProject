@@ -15,13 +15,10 @@ import pages.BasePage;
 
 public class UtilKit extends BasePage {
 	public void initTest() {
-
-
 	}
 	public void closeTest() {
 		driver.quit();
 	}
-	
 	public static Object[][] getData(String appName,String testcase) throws IOException
 	{
 		FileInputStream file = new FileInputStream("src\\test\\testdata\\TestData1.xlsx");
@@ -45,7 +42,6 @@ public class UtilKit extends BasePage {
 		}		
 		
 		return obj;
-		
 	}
 	private static ArrayList<Row> findRows(Sheet sheet, String testcase) {
 		ArrayList<Row> list = new ArrayList<Row>();
